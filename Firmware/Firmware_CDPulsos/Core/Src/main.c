@@ -59,7 +59,8 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
-
+int Mathias, Fumou, Estado;
+#define	BRAIN_GPIO_HIGH	GPIO_PIN_RESET
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -159,7 +160,12 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  Mathias = 1;
+	  Fumou = 1;
+	  if(Mathias == Fumou)
+	  {
+		  HAL_GPIO_WritePin(GPIOA, LCD_E_Pin, BRAIN_GPIO_HIGH);
+	  }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
