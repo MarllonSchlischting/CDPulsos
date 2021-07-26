@@ -1,0 +1,20 @@
+/*
+ * init.c
+ *
+ *  Created on: 26 de jul de 2021
+ *      Author: mathias
+ */
+#include "init.h"
+
+void init_peripherals()
+{
+	buttons.get_pressed_buttons();
+	lcd.init();
+	osDelay(10);
+	lcd.init();
+	osDelay(10);
+
+	lcd.clean();
+
+
+}

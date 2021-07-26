@@ -1,0 +1,3 @@
+lcd.c:11:6:clean	4	static
+lcd.c:16:6:init	4	static
+lcd.c:21:6:print_sensors_menu	16	static

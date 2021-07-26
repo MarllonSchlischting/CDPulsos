@@ -18,12 +18,17 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <main_state_machine_functions.h>
 #include "main.h"
 #include "cmsis_os.h"
 #include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "AppDataTypes/buttons.h"
+#include "AppDataTypes/lcd.h"
+#include "AppDataTypes/sd_card.h"
 
 /* USER CODE END Includes */
 
@@ -59,6 +64,7 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
+
 int Mathias, Fumou, Estado;
 #define	BRAIN_GPIO_HIGH	GPIO_PIN_RESET
 /* USER CODE END PV */
@@ -89,7 +95,6 @@ void StartDefaultTask(void *argument);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -160,12 +165,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  Mathias = 1;
-	  Fumou = 1;
-	  if(Mathias == Fumou)
-	  {
-		  HAL_GPIO_WritePin(GPIOA, LCD_E_Pin, BRAIN_GPIO_HIGH);
-	  }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -478,13 +477,64 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END 5 */
+	/* USER CODE BEGIN 5 */
+	enum {
+		STATE_0_INIT_PERIPHERALS,
+		STATE_1_WAIT_COMAND,
+		STATE_21_SENSOR1_FUNC,
+		STATE_22_SENSOR2_FUNC,
+		STATE_23_SENSOR3_FUNC,
+		STATE_3_SAVE_DATA
+	} main_state_machine;
+
+	uint8_t opt = 0;
+	uint8_t b = 0;
+
+	/* Infinite loop */
+	for(;;)
+	{
+		/// Aqui colocamos a nossa maquina de estados principal:
+		switch(main_state_machine)
+		{
+		case STATE_0_INIT_PERIPHERALS:
+			init_peripherals();
+
+			main_state_machine++;
+			break;
+
+		case STATE_1_WAIT_COMAND:
+			do {
+				lcd.print_sensors_menu(opt);
+
+				b = buttons.get_pressed_button();
+
+				switch(b)
+				{
+				case UP_BUTTON:
+					if (opt<1)
+						opt++;
+					break;
+				case DOWN_BUTTON:
+					if (opt>0)
+						opt--;
+					break;
+				}
+			} while(b =! ENTER_BUTTON);
+
+			main_state_machine += opt + 1;
+
+			break;
+		case STATE_21_SENSOR1_FUNC:
+			break;
+		case STATE_22_SENSOR2_FUNC:
+			break;
+		case STATE_23_SENSOR3_FUNC:
+			break;
+		case STATE_3_SAVE_DATA:
+			break;
+		}
+	}
+	/* USER CODE END 5 */
 }
 
 /**

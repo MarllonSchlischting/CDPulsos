@@ -1,0 +1,18 @@
+/*
+ * lcd.c
+ *
+ *  Created on: Jul 26, 2021
+ *      Author: mathias
+ */
+
+
+#include <AppDataTypes/lcd.h>
+
+struct LCD lcd = {
+	///Funções privadas
+	.clean = clean,
+	.init = init,
+
+	///Funções públicas
+	.print_sensors_menu = print_sensors_menu
+};

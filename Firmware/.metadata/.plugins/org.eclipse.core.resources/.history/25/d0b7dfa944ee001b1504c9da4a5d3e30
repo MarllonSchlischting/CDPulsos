@@ -1,0 +1,9 @@
+/*
+ * lcd.c
+ *
+ *  Created on: Jul 26, 2021
+ *      Author: mathias
+ */
+
+
+#include <AppDataTypes/lcd.h>
