@@ -18,9 +18,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include <main_state_machine_functions.h>
 #include "main.h"
-#include "cmsis_os.h"
 #include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -29,6 +27,11 @@
 #include "AppDataTypes/buttons.h"
 #include "AppDataTypes/lcd.h"
 #include "AppDataTypes/sd_card.h"
+
+#include "fatfs_sd.h"
+#include "string.h"
+
+#include "stdio.h"
 
 /* USER CODE END Includes */
 
@@ -56,14 +59,47 @@ TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
 
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
-};
 /* USER CODE BEGIN PV */
+
+FATFS fs;
+FIL fil;
+FRESULT fresult;
+char buffer[100];
+
+uint8_t br,bw;
+
+FATFS *pfs;
+DWORD fre_clust;
+uint32_t total, free_space;
+
+void send_uart(char * string)
+{
+	uint8_t len = strlen(string);
+	HAL_UART_Transmit(&huart1, (uint8_t *) string, len, 2000);
+}
+
+int bufsize(char * buf)
+{
+	int i=0;
+	while(*buf++ != '\0') i++;
+	return i;
+}
+
+void bufclear(void)
+{
+	for (int i=0; i<1024; i++)
+		buffer[i] = '\0';
+}
+
+int _write(int file, char *ptr, int len)
+{
+	int i=0;
+	for (i=0; i<len; i++)
+	{
+		ITM_SendChar((*ptr++));
+	}
+	return len;
+}
 
 int Mathias, Fumou, Estado;
 #define	BRAIN_GPIO_HIGH	GPIO_PIN_RESET
@@ -77,8 +113,6 @@ static void MX_SPI1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_USART1_UART_Init(void);
-void StartDefaultTask(void *argument);
-
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -123,49 +157,72 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
+  fresult = f_mount(&fs, "", 0);
+  if (fresult!=FR_OK)
+	  printf("error in mounting SD Card...\n");
+  else
+	  printf("SD Card mounted sucessfully...\n");
+
+  enum {
+	  STATE_0_INIT_PERIPHERALS,
+	  STATE_1_WAIT_COMAND,
+	  STATE_21_SENSOR1_FUNC,
+	  STATE_22_SENSOR2_FUNC,
+	  STATE_23_SENSOR3_FUNC,
+	  STATE_3_SAVE_DATA
+  } main_state_machine;
+
+  uint8_t opt = 0;
+  uint8_t b = 0;
+
   /* USER CODE END 2 */
 
-  /* Init scheduler */
-  osKernelInitialize();
-
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
-
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
-
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
-
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
-
-  /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
-
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
-
-  /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
-
-  /* Start scheduler */
-  osKernelStart();
-
-  /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
+	  switch(main_state_machine)
+	  {
+	  case STATE_0_INIT_PERIPHERALS:
+		  init_peripherals();
+
+		  main_state_machine++;
+		  break;
+
+	  case STATE_1_WAIT_COMAND:
+		  do {
+			  lcd.print_sensors_menu(opt);
+
+			  b = buttons.get_pressed_button();
+
+			  switch(b)
+			  {
+			  case UP_BUTTON:
+				  if (opt<1)
+					  opt++;
+				  break;
+			  case DOWN_BUTTON:
+				  if (opt>0)
+					  opt--;
+				  break;
+			  }
+		  } while(b =! ENTER_BUTTON);
+
+		  main_state_machine += opt + 1;
+
+		  break;
+	  case STATE_21_SENSOR1_FUNC:
+		  break;
+	  case STATE_22_SENSOR2_FUNC:
+		  break;
+	  case STATE_23_SENSOR3_FUNC:
+		  break;
+	  case STATE_3_SAVE_DATA:
+		  break;
+	  }
   }
   /* USER CODE END 3 */
 }
@@ -183,10 +240,13 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -195,17 +255,17 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
-  PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV2;
+  PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV6;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -280,7 +340,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -440,11 +500,20 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LCD_E_Pin|LCD_RW_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, SPI1_CS_Pin|LCD_RS_Pin|D4_Pin|D5_Pin
+                          |D6_Pin|D7_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LCD_RS_Pin|D4_Pin|D5_Pin|D6_Pin
-                          |D7_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LCD_E_Pin|LCD_RW_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : SPI1_CS_Pin LCD_RS_Pin D4_Pin D5_Pin
+                           D6_Pin D7_Pin */
+  GPIO_InitStruct.Pin = SPI1_CS_Pin|LCD_RS_Pin|D4_Pin|D5_Pin
+                          |D6_Pin|D7_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LCD_E_Pin LCD_RW_Pin */
   GPIO_InitStruct.Pin = LCD_E_Pin|LCD_RW_Pin;
@@ -453,89 +522,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LCD_RS_Pin D4_Pin D5_Pin D6_Pin
-                           D7_Pin */
-  GPIO_InitStruct.Pin = LCD_RS_Pin|D4_Pin|D5_Pin|D6_Pin
-                          |D7_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
-
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void *argument)
-{
-	/* USER CODE BEGIN 5 */
-	enum {
-		STATE_0_INIT_PERIPHERALS,
-		STATE_1_WAIT_COMAND,
-		STATE_21_SENSOR1_FUNC,
-		STATE_22_SENSOR2_FUNC,
-		STATE_23_SENSOR3_FUNC,
-		STATE_3_SAVE_DATA
-	} main_state_machine;
-
-	uint8_t opt = 0;
-	uint8_t b = 0;
-
-	/* Infinite loop */
-	for(;;)
-	{
-		/// Aqui colocamos a nossa maquina de estados principal:
-		switch(main_state_machine)
-		{
-		case STATE_0_INIT_PERIPHERALS:
-			init_peripherals();
-
-			main_state_machine++;
-			break;
-
-		case STATE_1_WAIT_COMAND:
-			do {
-				lcd.print_sensors_menu(opt);
-
-				b = buttons.get_pressed_button();
-
-				switch(b)
-				{
-				case UP_BUTTON:
-					if (opt<1)
-						opt++;
-					break;
-				case DOWN_BUTTON:
-					if (opt>0)
-						opt--;
-					break;
-				}
-			} while(b =! ENTER_BUTTON);
-
-			main_state_machine += opt + 1;
-
-			break;
-		case STATE_21_SENSOR1_FUNC:
-			break;
-		case STATE_22_SENSOR2_FUNC:
-			break;
-		case STATE_23_SENSOR3_FUNC:
-			break;
-		case STATE_3_SAVE_DATA:
-			break;
-		}
-	}
-	/* USER CODE END 5 */
-}
 
 /**
   * @brief  This function is executed in case of error occurrence.

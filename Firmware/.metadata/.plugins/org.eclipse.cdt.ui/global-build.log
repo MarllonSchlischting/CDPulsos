@@ -1,4 +1,71 @@
-18:39:28 **** Clean-only build of configuration Debug for project Firmware_CDPulsos ****
-make -j16 clean 
-rm -rf  default.size.stdout  Firmware_CDPulsos.list  Firmware_CDPulsos.elf  ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o  ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o  ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o  ./Middlewares/Third_Party/FreeRTOS/Source/croutine.o ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.o ./Middlewares/Third_Party/FreeRTOS/Source/list.o ./Middlewares/Third_Party/FreeRTOS/Source/queue.o ./Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o ./Middlewares/Third_Party/FreeRTOS/Source/timers.o  ./Middlewares/Third_Party/FatFs/src/option/syscall.o  ./Middlewares/Third_Party/FatFs/src/diskio.o ./Middlewares/Third_Party/FatFs/src/ff.o ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.o  ./FATFS/Target/user_diskio.o  ./FATFS/App/fatfs.o  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o  ./Core/Startup/startup_stm32f103c8tx.o  ./Core/Src/AppDataTypes/buttons.o ./Core/Src/AppDataTypes/lcd.o ./Core/Src/AppDataTypes/sd_card.o  ./Core/Src/freertos.o ./Core/Src/main.o ./Core/Src/main_state_machine_functions.o ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_it.o ./Core/Src/syscalls.o ./Core/Src/sysmem.o ./Core/Src/system_stm32f1xx.o  ./Core/Startup/startup_stm32f103c8tx.d  ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d  ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.d  ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.d  ./Middlewares/Third_Party/FreeRTOS/Source/croutine.d ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.d ./Middlewares/Third_Party/FreeRTOS/Source/list.d ./Middlewares/Third_Party/FreeRTOS/Source/queue.d ./Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.d ./Middlewares/Third_Party/FreeRTOS/Source/tasks.d ./Middlewares/Third_Party/FreeRTOS/Source/timers.d  ./Middlewares/Third_Party/FatFs/src/option/syscall.d  ./Middlewares/Third_Party/FatFs/src/diskio.d ./Middlewares/Third_Party/FatFs/src/ff.d ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.d  ./FATFS/Target/user_diskio.d  ./FATFS/App/fatfs.d  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d  ./Core/Src/AppDataTypes/buttons.d ./Core/Src/AppDataTypes/lcd.d ./Core/Src/AppDataTypes/sd_card.d  ./Core/Src/freertos.d ./Core/Src/main.d ./Core/Src/main_state_machine_functions.d ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_it.d ./Core/Src/syscalls.d ./Core/Src/sysmem.d ./Core/Src/system_stm32f1xx.d  Firmware_CDPulsos.bin  Firmware_CDPulsos.elf
+16:16:30 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:188:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  188 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:210:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  210 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+16:19:23 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:20:44 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:23:00 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:24:34 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:26:54 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
  

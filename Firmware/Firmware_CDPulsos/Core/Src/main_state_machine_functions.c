@@ -9,9 +9,9 @@
 void init_peripherals()
 {
 	lcd.init();
-	osDelay(10);
+	HAL_Delay(10);
 	lcd.init();
-	osDelay(10);
+	HAL_Delay(10);
 
 	lcd.clean();
 }

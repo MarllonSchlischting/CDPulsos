@@ -1,0 +1,5 @@
+1628360947798	Delete resource 'Firmware_CDPulsos/Core/Src/fatfs.c'
+1628360955578	Delete resource 'Firmware_CDPulsos/Core/Inc/fatfs.h'
+1628360977219	Delete resource 'Firmware_CDPulsos/Core/Inc/ffconf.h'
+1628361087519	Delete resource 'Firmware_CDPulsos/Core/Inc/user_diskio.h'
+1628361091091	Delete resource 'Firmware_CDPulsos/Core/Src/user_diskio.c'
