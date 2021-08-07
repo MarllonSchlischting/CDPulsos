@@ -1,4 +1,1113 @@
-18:39:28 **** Clean-only build of configuration Debug for project Firmware_CDPulsos ****
-make -j16 clean 
-rm -rf  default.size.stdout  Firmware_CDPulsos.list  Firmware_CDPulsos.elf  ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o  ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o  ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o  ./Middlewares/Third_Party/FreeRTOS/Source/croutine.o ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.o ./Middlewares/Third_Party/FreeRTOS/Source/list.o ./Middlewares/Third_Party/FreeRTOS/Source/queue.o ./Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o ./Middlewares/Third_Party/FreeRTOS/Source/timers.o  ./Middlewares/Third_Party/FatFs/src/option/syscall.o  ./Middlewares/Third_Party/FatFs/src/diskio.o ./Middlewares/Third_Party/FatFs/src/ff.o ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.o  ./FATFS/Target/user_diskio.o  ./FATFS/App/fatfs.o  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o  ./Core/Startup/startup_stm32f103c8tx.o  ./Core/Src/AppDataTypes/buttons.o ./Core/Src/AppDataTypes/lcd.o ./Core/Src/AppDataTypes/sd_card.o  ./Core/Src/freertos.o ./Core/Src/main.o ./Core/Src/main_state_machine_functions.o ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_it.o ./Core/Src/syscalls.o ./Core/Src/sysmem.o ./Core/Src/system_stm32f1xx.o  ./Core/Startup/startup_stm32f103c8tx.d  ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d  ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.d  ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.d  ./Middlewares/Third_Party/FreeRTOS/Source/croutine.d ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.d ./Middlewares/Third_Party/FreeRTOS/Source/list.d ./Middlewares/Third_Party/FreeRTOS/Source/queue.d ./Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.d ./Middlewares/Third_Party/FreeRTOS/Source/tasks.d ./Middlewares/Third_Party/FreeRTOS/Source/timers.d  ./Middlewares/Third_Party/FatFs/src/option/syscall.d  ./Middlewares/Third_Party/FatFs/src/diskio.d ./Middlewares/Third_Party/FatFs/src/ff.d ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.d  ./FATFS/Target/user_diskio.d  ./FATFS/App/fatfs.d  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d  ./Core/Src/AppDataTypes/buttons.d ./Core/Src/AppDataTypes/lcd.d ./Core/Src/AppDataTypes/sd_card.d  ./Core/Src/freertos.d ./Core/Src/main.d ./Core/Src/main_state_machine_functions.d ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_it.d ./Core/Src/syscalls.d ./Core/Src/sysmem.d ./Core/Src/system_stm32f1xx.d  Firmware_CDPulsos.bin  Firmware_CDPulsos.elf
+16:16:30 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:188:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  188 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:210:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  210 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+16:19:23 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:20:44 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:23:00 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:24:34 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+16:26:54 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:17:13 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:212:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  212 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  20676	    160	  18712	  39548	   9a7c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:25:06 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:192:21: warning: passing argument 1 of 'fopen' from incompatible pointer type [-Wincompatible-pointer-types]
+  192 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_OPEN_ALWAYS, FA_READ, FA_WRITE);
+      |                     ^~~~
+      |                     |
+      |                     FIL * {aka struct <anonymous> *}
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: expected 'const char * restrict' but argument is of type 'FIL *' {aka 'struct <anonymous> *'}
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:192:15: error: too many arguments to function 'fopen'
+  192 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_OPEN_ALWAYS, FA_READ, FA_WRITE);
+      |               ^~~~~
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: declared here
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:192:15: error: incompatible types when assigning to type 'FRESULT' {aka 'enum <anonymous>'} from type 'FILE *' {aka 'struct __sFILE *'}
+  192 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_OPEN_ALWAYS, FA_READ, FA_WRITE);
+      |               ^~~~~
+../Core/Src/main.c:198:21: warning: passing argument 1 of 'fopen' from incompatible pointer type [-Wincompatible-pointer-types]
+  198 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_READ);
+      |                     ^~~~
+      |                     |
+      |                     FIL * {aka struct <anonymous> *}
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: expected 'const char * restrict' but argument is of type 'FIL *' {aka 'struct <anonymous> *'}
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:198:15: error: too many arguments to function 'fopen'
+  198 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_READ);
+      |               ^~~~~
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: declared here
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:198:15: error: incompatible types when assigning to type 'FRESULT' {aka 'enum <anonymous>'} from type 'FILE *' {aka 'struct __sFILE *'}
+  198 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_READ);
+      |               ^~~~~
+../Core/Src/main.c:202:18: error: expected ';' before 'main_state_machine'
+  202 |     f_close(&fil)
+      |                  ^
+      |                  ;
+  203 | 
+  204 |     main_state_machine++;
+      |     ~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:25:39 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:192:21: warning: passing argument 1 of 'fopen' from incompatible pointer type [-Wincompatible-pointer-types]
+  192 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
+      |                     ^~~~
+      |                     |
+      |                     FIL * {aka struct <anonymous> *}
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: expected 'const char * restrict' but argument is of type 'FIL *' {aka 'struct <anonymous> *'}
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:192:15: error: too many arguments to function 'fopen'
+  192 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
+      |               ^~~~~
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: declared here
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:192:15: error: incompatible types when assigning to type 'FRESULT' {aka 'enum <anonymous>'} from type 'FILE *' {aka 'struct __sFILE *'}
+  192 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
+      |               ^~~~~
+../Core/Src/main.c:198:21: warning: passing argument 1 of 'fopen' from incompatible pointer type [-Wincompatible-pointer-types]
+  198 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_READ);
+      |                     ^~~~
+      |                     |
+      |                     FIL * {aka struct <anonymous> *}
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: expected 'const char * restrict' but argument is of type 'FIL *' {aka 'struct <anonymous> *'}
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:198:15: error: too many arguments to function 'fopen'
+  198 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_READ);
+      |               ^~~~~
+In file included from ../Core/Src/main.c:34:
+/opt/st/stm32cubeide_1.6.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/stdio.h:243:8: note: declared here
+  243 | FILE * fopen (const char *__restrict _name, const char *__restrict _type);
+      |        ^~~~~
+../Core/Src/main.c:198:15: error: incompatible types when assigning to type 'FRESULT' {aka 'enum <anonymous>'} from type 'FILE *' {aka 'struct __sFILE *'}
+  198 |     fresult = fopen(&fil, "arquivo_teste.txt", FA_READ);
+      |               ^~~~~
+../Core/Src/main.c:202:18: error: expected ';' before 'main_state_machine'
+  202 |     f_close(&fil)
+      |                  ^
+      |                  ;
+  203 | 
+  204 |     main_state_machine++;
+      |     ~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:25:58 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:202:18: error: expected ';' before 'main_state_machine'
+  202 |     f_close(&fil)
+      |                  ^
+      |                  ;
+  203 | 
+  204 |     main_state_machine++;
+      |     ~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:26:08 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35384	    160	  19224	  54768	   d5f0	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:26:14 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35384	    160	  19224	  54768	   d5f0	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:27:33 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35384	    160	  19224	  54768	   d5f0	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:28:50 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35384	    160	  19224	  54768	   d5f0	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:29:52 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/AppDataTypes/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/AppDataTypes/lcd.d" -MT"Core/Src/AppDataTypes/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/AppDataTypes/lcd.o"
+In file included from ../Core/Src/AppDataTypes/lcd.c:9:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:30:01 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:30:14 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:31:11 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:33:48 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35404	    160	  19224	  54788	   d604	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:33:59 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35404	    160	  19224	  54788	   d604	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:37:07 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35412	    160	  19224	  54796	   d60c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:37:10 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35412	    160	  19224	  54796	   d60c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:38:04 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35400	    160	  19224	  54784	   d600	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:38:09 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35400	    160	  19224	  54784	   d600	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:39:12 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35400	    160	  19224	  54784	   d600	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:41:03 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  34300	    160	  19224	  53684	   d1b4	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:41:29 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34300	    160	  19224	  53684	   d1b4	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:42:11 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  34284	    160	  19224	  53668	   d1a4	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:42:21 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34284	    160	  19224	  53668	   d1a4	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:43:16 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  34164	    160	  19224	  53548	   d12c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:43:22 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34164	    160	  19224	  53548	   d12c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:49:18 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/fatfs_sd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fatfs_sd.d" -MT"Core/Src/fatfs_sd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fatfs_sd.o"
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  34164	    160	  19224	  53548	   d12c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:49:39 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34164	    160	  19224	  53548	   d12c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:49:43 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34164	    160	  19224	  53548	   d12c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:50:14 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35412	    160	  19224	  54796	   d60c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:50:21 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35412	    160	  19224	  54796	   d60c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:51:17 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35404	    160	  19224	  54788	   d604	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:51:25 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35404	    160	  19224	  54788	   d604	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:52:07 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+20:52:15 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:53:21 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+20:53:56 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35396	    160	  19224	  54780	   d5fc	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:01:36 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35388	    160	  19224	  54772	   d5f4	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+21:01:49 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35388	    160	  19224	  54772	   d5f4	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:02:48 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35392	    160	  19224	  54776	   d5f8	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+21:03:22 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35392	    160	  19224	  54776	   d5f8	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:04:02 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:224:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  224 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  33844	    160	  19224	  53228	   cfec	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+21:04:05 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33844	    160	  19224	  53228	   cfec	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:06:44 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:226:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  226 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  37068	    160	  19224	  56452	   dc84	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+21:06:53 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37068	    160	  19224	  56452	   dc84	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:07:02 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37068	    160	  19224	  56452	   dc84	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:10:47 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:204:37: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  204 |     f_read(&fil, buffer, fil.fsize, &br);
+      |                                     ^~~
+      |                                     |
+      |                                     uint8_t * {aka unsigned char *}
+In file included from ../FATFS/App/fatfs.h:26,
+                 from ../Core/Src/main.c:22:
+../Middlewares/Third_Party/FatFs/src/ff.h:228:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  228 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);   /* Read data from a file */
+      |                                                ~~~~~~^~
+../Core/Src/main.c:228:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  228 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  37092	    160	  19224	  56476	   dc9c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+21:10:54 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37092	    160	  19224	  56476	   dc9c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:12:11 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/AppDataTypes/buttons.h:20:1: warning: useless storage class specifier in empty declaration
+   20 | };
+      | ^
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/AppDataTypes/lcd.h:21:1: warning: useless storage class specifier in empty declaration
+   21 | };
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/AppDataTypes/sd_card.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:5: warning: implicit declaration of function 'init_peripherals' [-Wimplicit-function-declaration]
+  190 |     init_peripherals();
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:204:37: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  204 |     f_read(&fil, buffer, fil.fsize, &br);
+      |                                     ^~~
+      |                                     |
+      |                                     uint8_t * {aka unsigned char *}
+In file included from ../FATFS/App/fatfs.h:26,
+                 from ../Core/Src/main.c:22:
+../Middlewares/Third_Party/FatFs/src/ff.h:228:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  228 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);   /* Read data from a file */
+      |                                                ~~~~~~^~
+../Core/Src/main.c:228:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  228 |     } while(b =! ENTER_BUTTON);
+      |             ^
+arm-none-eabi-gcc -o "Firmware_CDPulsos.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/mathias/Área de Trabalho/marllon/CDPulsos/Firmware/Firmware_CDPulsos/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Firmware_CDPulsos.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Firmware_CDPulsos.elf
+ 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+arm-none-eabi-objdump -h -S  Firmware_CDPulsos.elf  > "Firmware_CDPulsos.list"
+arm-none-eabi-objcopy  -O binary  Firmware_CDPulsos.elf  "Firmware_CDPulsos.bin"
+   text	   data	    bss	    dec	    hex	filename
+  36948	    160	  19224	  56332	   dc0c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+Finished building: Firmware_CDPulsos.bin
+ 
+Finished building: Firmware_CDPulsos.list
+ 
+21:12:15 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36948	    160	  19224	  56332	   dc0c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:12:45 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36948	    160	  19224	  56332	   dc0c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
+ 
+21:13:05 **** Incremental Build of configuration Debug for project Firmware_CDPulsos ****
+make -j16 all 
+arm-none-eabi-size   Firmware_CDPulsos.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36948	    160	  19224	  56332	   dc0c	Firmware_CDPulsos.elf
+Finished building: default.size.stdout
  

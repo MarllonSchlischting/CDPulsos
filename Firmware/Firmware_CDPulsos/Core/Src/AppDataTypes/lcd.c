@@ -25,5 +25,6 @@ void print_sensors_menu(uint8_t menu_choice)
 
 struct LCD lcd = {
 	.init = init,
+	.clean = clean,
 	.print_sensors_menu = print_sensors_menu
 };
